@@ -1,0 +1,1 @@
+get-date | Out-File $env:userprofile\TestScript.txt
