@@ -143,7 +143,7 @@
                   "typeHandlerVersion": "1.8",
                   "autoUpgradeMinorVersion": true,
                   "protectedSettings": {
-                    "commandToExecute": "powershell -ExecutionPolicy Unrestricted -File helloWorld.ps1"
+                    "commandToExecute": "powershell -ExecutionPolicy Unrestricted -File testscript.ps1"
                   },
                   "type": "CustomScriptExtension"
                 }
