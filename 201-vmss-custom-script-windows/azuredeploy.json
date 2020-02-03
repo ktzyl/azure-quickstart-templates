@@ -137,7 +137,7 @@
                   "publisher": "Microsoft.Compute",
                   "settings": {
                     "fileUris": [
-                      "[concat(parameters('_artifactsLocation'), '/scripts/helloWorld.ps1')]"
+                      "[concat(parameters('_artifactsLocation'), '/scripts/testscript.ps1')]"
                     ]
                   },
                   "typeHandlerVersion": "1.8",
