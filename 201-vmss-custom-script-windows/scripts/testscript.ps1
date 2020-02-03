@@ -1,1 +1,1 @@
-get-date | Out-File $env:userprofile\TestScript.txt
+get-date | Out-File c:\PerfLogs\TestScript.txt
