@@ -1,0 +1,28 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    - task: AzureResourceManagerTemplateDeployment@3
+      inputs:
+        deploymentScope: 'Resource Group'
+        azureResourceManagerConnection: '400USD(97842da5-66f7-4cc7-a42b-7a4d11b3a9f8)'
+        subscriptionId: '97842da5-66f7-4cc7-a42b-7a4d11b3a9f8'
+        action: 'Create Or Update Resource Group'
+        resourceGroupName: '121012123000453'
+        location: 'Australia East'
+        templateLocation: 'URL of the file'
+        csmFileLink: 'https://github.com/Azure/azure-quickstart-templates/blob/master/101-vm-simple-windows/azuredeploy.json'
+        csmParametersFileLink: 'https://github.com/Azure/azure-quickstart-templates/blob/master/101-vm-simple-windows/azuredeploy.parameters.json'
+        deploymentMode: 'Complete'
